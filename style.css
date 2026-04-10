@@ -706,7 +706,7 @@ strong {
     /* Como o wrapper subiu 100vh, empurramos o vidro 100vh p/ baixo para imobilizá-o na física
        original (antes era -50vh, agora fica 50vh) mantendo a aparência impecável. */
     top: calc(50vh - 80px) !important;
-    height: calc(200vh + 160px) !important;
+    height: calc(210vh + 160px) !important;
   }
 }
 
@@ -737,10 +737,14 @@ strong {
     /* O width foi de 160vw para 180vw para expandir a escala da câmera do Spline,
        deixando o vidro "pouco maior" para desgrudar dos textos da moldura.
        O left -40vw compensa perfeitamente os 80vw extras para manter sempre centralizado. */
-    top: -25vh !important;
-    left: -40vw !important;
-    width: 180vw !important;
-    height: 350vh !important;
+    top: -50vh !important;
+    left: -75vw !important;
+    width: 250vw !important;
+    height: 400vh !important;
+    transform: scale(0.75) !important;
+    /* 0.8 = 80% do tamanho original */
+    transform-origin: center center !important;
+    /* encolhe a partir do centro */
   }
 }
 
@@ -1555,14 +1559,16 @@ strong {
   }
 
   .problema-txt {
-    padding: 0 16px; /* Empurra as laterais do texto para dentro */
+    padding: 0 16px;
+    /* Empurra as laterais do texto para dentro */
   }
 
   .problema-destaque {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    margin: 0 16px 24px; /* margem lateral p/ n vazar no vidro, e embaixo (24px) p/ ficar longe da base do vidro */
+    margin: 0 16px 24px;
+    /* margem lateral p/ n vazar no vidro, e embaixo (24px) p/ ficar longe da base do vidro */
   }
 
   .destaque-bar {
